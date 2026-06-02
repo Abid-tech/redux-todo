@@ -38,3 +38,79 @@ h1,h2,h3,h4,h5,h6{
 .dash-content h5{
     padding-top: 5px;
 }
+
+
+#add-task{
+    background-color: var(--midbrown-color);
+    margin-top: 30px;
+    padding: 20px 15px;
+    border-radius: 15px;
+}
+.sub-input input{
+    background-color: var(--white-color);
+}
+.form-control:focus{
+    background-color: var(--white-color);
+    border-color: var(--darkbrown-color);
+    box-shadow: 0 0 0 .25rem #503936
+}
+.sub-btn input{
+    background: var(--white-color);
+    border: none;
+    padding: 7px 30px;
+    color: var(--darkbrown-color);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#task-list{
+    margin: 50px 0;
+}
+#task-list h3{
+    color: var(--darkbrown-color);
+    font-weight: 600;
+} 
+
+.task-itm{
+    background: var(--midbrown-color);
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 15px;
+    color: var(--white-color);
+}
+.task-itm h5{
+    font-weight: 600;
+    margin-top: 15px;
+}
+.task-itm i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+.task-itm button{
+     background: transparent;
+     color: var(--white-color);
+     border: none;
+}
+
+
+
+
+.task-itm.completed {
+    background-color:var(--lightbrown-color); 
+    border-left: 4px solid var(--darkbrown-color);
+    opacity: 0.9;
+}
+.task-itm.completed:hover {
+    background-color: var(--midbrown-color);
+}
+
+/* Style for disabled button */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Animation for completion */
+.task-itm {
+    transition: all 0.3s ease;
+}

@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,22 +25,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Changed from 18 to 20
+          node-version: '20'
           
       - name: Install dependencies
-        run: |
-          cd frontend
-          npm ci
+        run: npm ci   # No cd needed - we're already at root
           
       - name: Build
-        run: |
-          cd frontend
-          npm run build
+        run: npm run build   # No cd needed
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist  # Change to 'build' if using CRA, or 'dist' for Vite
+          path: ./dist   # Vite outputs to 'dist' folder
           
   deploy:
     environment:

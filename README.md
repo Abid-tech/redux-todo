@@ -1,16 +1,150 @@
-# React + Vite
+# Daily Routine Manager - Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Todo Application built with **React** and **Redux Toolkit**. This project helps users efficiently manage their daily tasks with features such as task creation, editing, deletion, completion tracking, and a real-time dashboard for productivity insights.
 
-Currently, two official plugins are available:
+Live at : https://abid-tech.github.io/redux-todo/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+### Task Management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Add new tasks instantly.
+* Edit existing tasks.
+* Delete tasks that are no longer needed.
+* Mark tasks as completed.
+* Prevent accidental modification of completed tasks.
 
-## Expanding the ESLint configuration
+### Dashboard Analytics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application provides a simple dashboard that displays:
+
+* Total number of tasks.
+* Number of completed tasks.
+* Number of pending tasks.
+
+### User Experience
+
+* Clean and intuitive interface.
+* Real-time state management using Redux Toolkit.
+* Keyboard shortcuts for editing:
+
+  * **Enter** → Save changes.
+  * **Escape** → Cancel editing.
+* Automatic timestamp generation for newly created tasks.
+
+## Technologies Used
+
+* React
+* Redux Toolkit
+* React Redux
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Bootstrap
+
+## Project Structure
+
+```text
+src/
+│
+├── components/
+│   └── Todo.jsx
+│
+├── slices/
+│   └── todo/
+│       └── todoSlice.js
+│
+├── store/
+│   └── store.js
+│
+└── App.jsx
+```
+
+## Redux State Structure
+
+```javascript
+{
+  todos: [
+    {
+      id: "unique-id",
+      text: "Task description",
+      time: "Creation timestamp",
+      isCompleted: false,
+      isEdit: false
+    }
+  ]
+}
+```
+
+## Implemented Redux Actions
+
+| Action         | Description              |
+| -------------- | ------------------------ |
+| addTodo        | Add a new task           |
+| removeTodo     | Delete a task            |
+| toggleComplete | Mark a task as completed |
+| editTrue       | Enable edit mode         |
+| editTodo       | Update task text         |
+| cancelEdit     | Cancel editing           |
+
+
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Abid-tech/redux-todo.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd redux-todo
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will start on:
+
+```text
+http://localhost:5173
+```
+
+## Learning Objectives
+
+This project demonstrates:
+
+* React Functional Components
+* React Hooks
+* Redux Toolkit State Management
+* Global State Updates
+* Immutable State Handling with Redux Toolkit
+* CRUD Operations
+* Component-Based Architecture
+
+## Future Improvements
+
+* Local Storage persistence.
+* Task filtering (All, Completed, Pending).
+* Search functionality.
+* Due dates and reminders.
+* Drag-and-drop task organization.
+* Dark mode support.
+
+## Author
+
+**Md. Abid Ali**
+
+GitHub: https://github.com/Abid-tech/
+
